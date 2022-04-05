@@ -13,3 +13,4 @@ phases:
     commands:
       - echo "test build"
       - ls -l
+      - aws s3 sync build s3://kamada-test2/codedeploy-test/ --delete
