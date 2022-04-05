@@ -12,3 +12,4 @@ phases:
   build:
     commands:
       - echo "test build"
+      - ls -l
