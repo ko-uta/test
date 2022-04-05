@@ -8,8 +8,7 @@ phases:
       - n 16
   pre_build:
     commands:
-      - npm install
+      - node -v
   build:
     commands:
       - echo "test build"
-      - node -v
