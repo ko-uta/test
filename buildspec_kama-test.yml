@@ -11,4 +11,5 @@ phases:
       - npm install
   build:
     commands:
-      - 
+      - echo "test build"
+      - node -v
