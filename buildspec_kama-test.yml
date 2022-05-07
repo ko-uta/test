@@ -12,8 +12,11 @@ phases:
   build:
     commands:
       - echo "test build"
-      - ls -l
+      - ls -l build/
   post_build:
     commands:
-      - aws s3 sync ./ s3://kamada-test2/codedeploy-test --delete --exclude "build/*"
+      - mv build admin
+      - ls -l admin/
+      - aws s3 sync admin/ s3://kamada-test2/admin --delete
+#      - aws s3 sync admin/ s3://kamada-test2/admin --delete --exclude "build/*"
 #      - aws s3 sync build s3://kamada-test2/codedeploy-test/build --delete
