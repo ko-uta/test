@@ -23,6 +23,7 @@ phases:
       - ls -l
 #      - mv build admin
 #      - ls -l admin/
-#      - aws s3 sync build/ s3://kamada-test2/admin --delete
+      - echo "aws s3 sync build/ s3://${S3_BUCKET_NAME}/admin --delete"
 #      - aws s3 sync admin/ s3://kamada-test2/admin --delete --exclude "build/*"
 #      - aws s3 sync build s3://kamada-test2/codedeploy-test/build --delete
+      - echo "aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_ID} --paths "${CLOUDFONT_INVALIDATION_PATHS}""
