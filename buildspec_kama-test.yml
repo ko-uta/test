@@ -8,7 +8,9 @@ phases:
       - n 16
   pre_build:
     commands:
-      - node -v
+      - echo "S3_BUCKET_NAME               = ${S3_BUCKET_NAME}"
+      - echo "CLOUDFRONT_ID                = ${CLOUDFRONT_ID}"
+      - echo "CLOUDFONT_INVALIDATION_PATHS = ${CLOUDFONT_INVALIDATION_PATHS}"
   build:
     commands:
       - echo "test build"
